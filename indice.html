@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+        .banner { height: 120px; background: linear-gradient(135deg, var(--second), #7c3aed); border-radius: .375rem .375rem 0 0; }
+        .avatar { width: 150px; height: 150px; object-fit: cover; margin-top: -75px; border: 4px solid var(--second); position: relative; }
+        .card { max-height: none; border: 0; }
+        .accordion-item { background: var(--primary); color: var(--ligth); border-color: #444; }
+        .accordion-button { background: var(--primary); color: var(--ligth); }
+        .accordion-button:not(.collapsed) { background: #3a3a45; color: var(--second); box-shadow: none; }
+        .accordion-button::after { filter: invert(1); }
+        .badge-lang { background: rgba(0,229,255,.15); color: var(--second); border: 1px solid var(--second); font-weight: 500; font-size: .9rem; margin: 0 6px 8px 0; }
+        .contact-item { color: var(--ligth); text-decoration: none; }
+    </style>
+    <title>Mi CV - José María García González</title>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">José María García</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Acerca de mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Links externos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="https://github.com/ShadowXwx" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/garc%C3%ADa-gonz%C3%A1lez-jos%C3%A9-mar%C3%ADa-521181268/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid" id="inicio">
+        <div class="container-fluid px-4 px-lg-5 py-5">
+            <div class="row py-5">
+                <!-- Tarjeta de perfil -->
+                <div class="col-12 col-md-5 d-flex justify-content-center mb-3">
+                    <div class="card" style="width: 80%;">
+                        <div class="banner"></div>
+                        <div class="card-body text-center bg-primary text-light">
+                            <img src="perfil.jpg" class="avatar rounded-circle" alt="Foto de José María García González">
+                            <h5 class="card-title mt-3">José María García González</h5>
+                            <p class="card-text text-second">Estudiante de Licenciatura en Informática</p>
+                            <div class="social">
+                                <a target="_blank" href="https://github.com/ShadowXwx" title="Github"><span class="fab fa-github"></span></a>
+                                <a target="_blank" href="https://wa.me/525531785681" title="WhatsApp"><span class="fab fa-whatsapp"></span></a>
+                                <a href="mailto:jose08maria06@gmail.com" title="Correo"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acerca de mí -->
+                <div class="col-12 col-md-7 text-light">
+                    <div class="d-flex align-items-center"><h2>&#x270D; Acerca de mí</h2></div>
+                    <hr>
+                    <h3><strong>Hola, me llamo José María</strong></h3>
+                    <p class="fs-6">Soy estudiante de la Licenciatura en Informática en la FES Cuautitlán, UNAM, con egreso previsto en diciembre de 2027.</p>
+                    <p class="fs-6">Programo en C, C++, Java, C#, Python, JavaScript, PHP y SQL, y desarrollo interfaces web con HTML y CSS.</p>
+                </div>
+
+                <div class="col-12 text-light">
+                    <div class="row py-3">
+                        <!-- Educación -->
+                        <div class="col-12 seccion" id="educacion">
+                            <div class="d-flex align-items-center"><h2>🏛 Educación</h2></div>
+                            <hr>
+                            <div class="date activo w-auto"><span>Egreso: diciembre de 2027</span></div>
+                            <h5><strong>Licenciatura en Informática</strong></h5>
+                            <h6 class="company">Facultad de Estudios Superiores Cuautitlán (FES Cuautitlán), UNAM</h6>
+                        </div>
+
+                        <!-- Proyectos (acordeón de Bootstrap) -->
+                        <div class="col-12 seccion mt-4" id="proyectos">
+                            <div class="d-flex align-items-center"><h2>💻 Proyectos</h2></div>
+                            <hr>
+                            <div class="accordion" id="accProyectos">
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#proy1" aria-expanded="true" aria-controls="proy1">
+                Sistema contable de costos
+            </button>
+        </h2>
+        <div id="proy1" class="accordion-collapse collapse show" data-bs-parent="#accProyectos">
+            <div class="accordion-body">
+                <p class="fs-6 mb-1">Sistema contable que maneja costos, asientos de diario, esquemas de T de mayor, estado de resultados y balance general.</p>
+                <a href="#" target="_blank" class="text-second">Ver proyecto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proy2" aria-expanded="false" aria-controls="proy2">
+                Chatbot de renta de autos
+            </button>
+        </h2>
+        <div id="proy2" class="accordion-collapse collapse" data-bs-parent="#accProyectos">
+            <div class="accordion-body">
+                <p class="fs-6 mb-1">Chatbot que atiende a los clientes en el proceso de renta de autos.</p>
+                <a href="https://github.com/damian00lopez-droid/Acarr" target="_blank" class="text-second">Ver proyecto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proy3" aria-expanded="false" aria-controls="proy3">
+                Chatbot de venta de iPhone (Dialogflow)
+            </button>
+        </h2>
+        <div id="proy3" class="accordion-collapse collapse" data-bs-parent="#accProyectos">
+            <div class="accordion-body">
+                <p class="fs-6 mb-1">Chatbot de venta de celulares iPhone creado en Dialogflow, desplegado en Render, con el código disponible en GitHub.</p>
+                <a href="https://github.com/ShadowXwx/michatbot_iphone" target="_blank" class="text-second"><i class="fab fa-github"></i> Código en GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proy4" aria-expanded="false" aria-controls="proy4">
+                Base de datos para supermercado
+            </button>
+        </h2>
+        <div id="proy4" class="accordion-collapse collapse" data-bs-parent="#accProyectos">
+            <div class="accordion-body">
+                <p class="fs-6 mb-1">Base de datos con CRUD completo, IA para sugerencias, y apartados separados para clientes y administrador.</p>
+                <a href="supermercado.pdf" target="_blank" class="text-second"><i class="fas fa-file-pdf"></i> Ver archivo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proy5" aria-expanded="false" aria-controls="proy5">
+                AutoRent – Sitio web de renta de autos
+            </button>
+        </h2>
+        <div id="proy5" class="accordion-collapse collapse" data-bs-parent="#accProyectos">
+            <div class="accordion-body">
+                <p class="fs-6 mb-1">Sitio web para la renta de autos llamado AutoRent.</p>
+                <a href="https://acarr-v3a2.onrender.com/catalogo.html" target="_blank" class="text-second">Ver sitio</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+                        </div>
+                    </div>
+
+                    <!-- Certificaciones -->
+                    <div class="row py-3 seccion mx-0 mt-4" id="certificaciones">
+                        <div class="d-flex align-items-center"><h2>🎓 Certificaciones</h2></div>
+                        <hr>
+                        <div class="col-12">
+                            <div class="accordion" id="accCert">
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert1" aria-expanded="true" aria-controls="cert1">
+                Fundamentos de Análisis de Datos
+            </button>
+        </h2>
+        <div id="cert1" class="accordion-collapse collapse show" data-bs-parent="#accCert">
+            <div class="accordion-body">
+                <div class="date activo w-auto"><span>Finalizado: 04 Sep 2026</span></div>
+                <h6 class="company">Universidad Nacional Autónoma de México · Cisco Networking Academy</h6>
+                <p class="fs-6 mb-0">Curso completado con éxito sobre fundamentos de análisis de datos, impartido por Jesús Díaz Barriga.</p>
+                <a href="certificado_cisco.pdf" target="_blank" class="text-second"><i class="fas fa-file-pdf"></i> Ver certificado</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cert2" aria-expanded="false" aria-controls="cert2">
+                Inteligencia Artificial con Python
+            </button>
+        </h2>
+        <div id="cert2" class="accordion-collapse collapse" data-bs-parent="#accCert">
+            <div class="accordion-body">
+                <div class="date activo w-auto"><span>En curso</span></div>
+                <h6 class="company">Samsung</h6>
+                <p class="fs-6 mb-0">Samsung Innovation Campus 2026.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                   <div class="row py-3 seccion mx-0 mt-4" id="skills">
+                        <div class="d-flex align-items-center"><h2>🖌 Skills</h2></div>
+                        <hr>
+                        <div class="col-12">
+                            <div class="date w-auto"><span>LENGUAJES DE PROGRAMACIÓN</span></div>
+                            <div class="py-2">
+                                <span class="badge badge-lang">C</span>
+                                <span class="badge badge-lang">C++</span>
+                                <span class="badge badge-lang">C#</span>
+                                <span class="badge badge-lang">Java</span>
+                                <span class="badge badge-lang">Python</span>
+                                <span class="badge badge-lang">JavaScript</span>
+                                <span class="badge badge-lang">PHP</span>
+                                <span class="badge badge-lang">SQL</span>
+                            </div>
+                            <div class="date w-auto"><span>DESARROLLO WEB</span></div>
+                            <div class="py-2">
+                                <span class="badge badge-lang">HTML</span>
+                                <span class="badge badge-lang">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="row py-3 seccion mx-0 mt-4 text-light" id="contacto">
+                        <div class="d-flex align-items-center"><h2>📬 Contacto</h2></div>
+                        <hr>
+                        <div class="col-12 col-md-6">
+                            <ul class="list-unstyled fs-6">
+                                <li class="mb-2"><i class="fas fa-envelope text-second"></i>
+                                    <a class="contact-item" href="mailto:jose08maria06@gmail.com">jose08maria06@gmail.com</a></li>
+                                <li class="mb-2"><i class="fas fa-phone text-second"></i>
+                                    <a class="contact-item" href="tel:+525531785681">55 3178 5681</a></li>
+                                <li class="mb-2"><i class="fab fa-whatsapp text-second"></i>
+                                    <a class="contact-item" href="https://wa.me/525531785681" target="_blank">Escríbeme por WhatsApp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">© 2026 <strong>José María García González</strong>. FES Cuautitlán, UNAM.</div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
